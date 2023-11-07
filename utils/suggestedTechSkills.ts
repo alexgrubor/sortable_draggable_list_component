@@ -1,0 +1,16 @@
+export const suggestedTechSkills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "React Native",
+  "Angular",
+  "Vue",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "HTML",
+  "CSS",
+  "Next.js",
+  "Gatsby",
+  "GraphQL",
+];
