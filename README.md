@@ -29,8 +29,7 @@ In this frontend challenge, you'll learn how to build a real-world UI component 
 ## Demo and Solution
 
 
-### Video Demo
-[<img src="./public/filesforreadme/Screenshot%202023-11-08%20102150.png" width="50%">](./public/filesforreadme/draggable component.mp4 "Live")
+<video src='./public/filesforreadme/draggable component.mp4' width=180/> |
 
 ### Screenshots
 ![Sortable List Component Screenshot](./public/filesforreadme/Screenshot%202023-11-08%20102150.png)
