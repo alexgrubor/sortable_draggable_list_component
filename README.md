@@ -1,4 +1,3 @@
-![Sortable List Component](./design/desktop-cover.png)
 
 **Challenge Title**
 Sortable List Component
@@ -26,6 +25,12 @@ In this frontend challenge, you'll learn how to build a real-world UI component 
 - The component should also display a column of suggested skills next to the list.
 - The user should be able to select a skill from the suggested skills column and add it directly to the list by clicking on the skill.
 
-I hope you'll enjoy building this challenge.
 
-Feel free to share your solution on our [website](https://www.frontendpro.dev/) or on social media and [tag us](https://twitter.com/FrontendProHQ).
+## Demo and Solution
+<video width="320" height="240" controls>
+  <source src="./public/filesforreadme/draggable component.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+![Sortable List Component Screenshot]('./public/filesforreadme/Screenshot 2023-11-08 102150.png')
+![Sortable List Component in Action]('./public/filesforreadme/Screenshot 2023-11-08 102214.png')
