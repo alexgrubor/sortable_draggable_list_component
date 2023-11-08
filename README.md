@@ -31,8 +31,6 @@ In this frontend challenge, you'll learn how to build a real-world UI component 
 
 ## Demo and Solution
 
-###Video
-<video src='./public/filesforreadme/draggable component.mp4' width=180/> |
 
 
 
