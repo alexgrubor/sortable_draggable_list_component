@@ -23,16 +23,7 @@ const ChoseSkills = () => {
       }
     }
   };
-  const onDragStart = () => {
-    console.log("drag start");
-  };
-  const onDragOver = () => {
-    console.log("drag over");
-    
-  };
-  const onDrop = () => {
-    console.log("end");
-  };
+
 
   const [suggestedSkillsWithoutSelected, setSuggestedSkills] =
     useState(suggestedTechSkills);
@@ -43,9 +34,7 @@ const ChoseSkills = () => {
         setSelectedSkills={addSkill}
         setAllSkills={setSelectedSkills}
         allSkills={suggestedSkillsWithoutSelected}
-        onDragStart={onDragStart}
-        onDragOver={onDragOver}
-        onDrop={onDrop}
+       
       />
       <SuggestedSkills
         allSkills={suggestedSkillsWithoutSelected}

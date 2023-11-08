@@ -1,42 +1,26 @@
 import Plus from "@/public/design/Plus.svg";
 import Image from "next/image";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 interface SelectSkillProps {
   setSelectedSkills: (skill: string) => void;
   allSkills: string[];
   selectedSkills: string[];
-  setAllSkills: React.Dispatch<React.SetStateAction<string[]>> 
-  onDragStart: () => void;
-  onDragOver: () => void;
-  onDrop: () => void;
+  setAllSkills: React.Dispatch<React.SetStateAction<string[]>>;
 }
 const SelectSkill = ({
   selectedSkills,
   setSelectedSkills,
   allSkills,
-  onDragStart,
-  onDragOver,
-  onDrop,
   setAllSkills,
 }: SelectSkillProps) => {
-   
-    
-  const handleDragStart =
-    (i: number) => (event: React.DragEvent<HTMLDivElement>) => {
-      event.dataTransfer.setData("text/plain", i.toString());
-      onDragStart();
-    
-    };
-
-  const handleDrop =
-    (i: number) => (event: React.DragEvent<HTMLDivElement>) => {
-        console.log('lolo');
-        onDrop()
-     
-    };
-    const handleOver = (i:number)=>(event: React.DragEvent<HTMLDivElement>)=>{
-        onDragOver();
-    }
+  const onDragEnd = (result: any) => {
+    if (!result.destination) return;
+    const items = Array.from(selectedSkills);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+    setAllSkills(items)
+  };
 
   const fiveElements = () => {
     const inputsNeeded = 5 - selectedSkills.length;
@@ -79,28 +63,47 @@ const SelectSkill = ({
   const elements = fiveElements();
 
   return (
-    <div className="w-4/5">
-      {selectedSkills.map((skill, i) => (
-        <div
-          key={skill}
-          className="flex p-1 bg-[#0D2167] justify-between items-center mb-2"
-          draggable
-          onDragStart={handleDragStart(i)}
-          onDragOver={handleOver(i)}
-          onDrop={handleDrop(i)}
-        >
-          <span className="text-white">
-            {i + 1}. {skill}
-          </span>
-          <button
-            onClick={() => setSelectedSkills(skill)}
-            className=" text-white font-bold py-1 px-2 rounded"
-          >
-            <Image src={Plus} alt="+" />
-          </button>
-        </div>
-      ))}
-      {elements}
+    <div className="w-[50%]">
+      
+      <div className="flex flex-col">
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Droppable droppableId={`skills ${Math.random()}`}>
+            {(provided) => (
+              <div {...provided.droppableProps} ref={provided.innerRef}>
+                {selectedSkills.map((skill, index) => (
+                  <Draggable
+                    key={skill}
+                    draggableId={skill}
+                    index={index}
+                    isDragDisabled={false}
+                  >
+                    {(provided) => (
+                      <div
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        className="flex justify-between items-center bg-[#0D2167] text-white  w-full rounded my-2"
+                      >
+                        <p className="p-2 ml-4">{index+1}. {skill}</p>
+                        <button
+                          className="mr-4"
+                          onClick={() => {
+                            setSelectedSkills(skill);
+                          }}
+                        >
+                          <Image src={Plus} alt="plus" />
+                        </button>
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+        {elements}
+      </div>
     </div>
   );
 };
