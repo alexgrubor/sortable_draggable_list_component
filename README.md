@@ -27,10 +27,10 @@ In this frontend challenge, you'll learn how to build a real-world UI component 
 
 
 ## Demo and Solution
-## Demo and Solution
+
 
 ### Video Demo
-[![Sortable List Component in Action](./public/filesforreadme/Screenshot 2023-11-08 102150.png)](./public/filesforreadme/draggable%20component.mp4 "Sortable List Component in Action - Click to Watch!")
+[<img src="./public/filesforreadme/Screenshot%202023-11-08%20102150.png" width="50%">](./public/filesforreadme/draggable component.mp4 "Live")
 
 ### Screenshots
 ![Sortable List Component Screenshot](./public/filesforreadme/Screenshot%202023-11-08%20102150.png)
