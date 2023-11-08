@@ -27,10 +27,12 @@ In this frontend challenge, you'll learn how to build a real-world UI component 
 
 
 ## Demo and Solution
-<video width="320" height="240" controls>
-  <source src="./public/filesforreadme/draggable component.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+## Demo and Solution
 
-![Sortable List Component Screenshot]('./public/filesforreadme/Screenshot 2023-11-08 102150.png')
-![Sortable List Component in Action]('./public/filesforreadme/Screenshot 2023-11-08 102214.png')
+### Video Demo
+[![Sortable List Component in Action](./public/filesforreadme/Screenshot 2023-11-08 102150.png)](./public/filesforreadme/draggable%20component.mp4 "Sortable List Component in Action - Click to Watch!")
+
+### Screenshots
+![Sortable List Component Screenshot](./public/filesforreadme/Screenshot%202023-11-08%20102150.png)
+![Sortable List Component in Action](./public/filesforreadme/Screenshot%202023-11-08%20102214.png)
+
